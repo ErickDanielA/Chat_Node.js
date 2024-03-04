@@ -15,3 +15,11 @@ http.listen(port, function (){
 app.get('/', function(req, resp){
     resp.sendFile(__dirname + '/index.html');
 })
+
+serverSocket.on('connect', function(socket){
+    console.log('Cliente conectado: '+ socket.id);
+
+    socket.on('chat_msg', function (msg){
+        console.log(`Msg recebida do cliente ${socket.id}: ${msg}`)
+    })
+});
