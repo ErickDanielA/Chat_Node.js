@@ -29,4 +29,8 @@ serverSocket.on('connect', function (socket) {
         serverSocket.emit('chat_msg', `${socket.nickname}: ${msg}`);
     })
 
+    socket.on('status', function (msg) {
+        socket.broadcast.emit('status', msg);
+    })
+
 });
