@@ -1,1 +1,1 @@
-A simple chat for in comunication with others peoples
+### A simple chat for in comunication with others peoples
